@@ -14,4 +14,4 @@
 
 # Execute the command with the remaining arguments
 # exec reflex "$@"
-exec reflex -r '(\.go$|go\.mod|^.env)' --decoration=none -s go run "$@"
+exec reflex -r '(\/app.*.go$|\/app.*.go\.mod|\/app.*.env)' --decoration=none -s go run "$@"
