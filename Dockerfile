@@ -1,4 +1,4 @@
-FROM golang:1.22
+FROM --platform=linux/amd64 golang:1.22
 
 WORKDIR /app
 
@@ -10,9 +10,4 @@ RUN go install github.com/cespare/reflex@latest
 # ENTRYPOINT [ "bash" ]
 ENTRYPOINT [ "/start.sh" ]
 
-# ENTRYPOINT ["reflex", "-r", "'(\.go$|go\.mod|\.env$)'", "--decoration=none", "-s", "go", "run"]
-
-# CMD ["reflex", "-r", "'(\.go$|go\.mod|\.env$)'", "--decoration=none", "-s", "go", "run"]
-
 CMD []
-# ENTRYPOINT ["reflex -r (\.go$|go\.mod|\.env$) --decoration=none -s go run"]
