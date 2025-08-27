@@ -19,3 +19,14 @@ services:
       - "my-app-param"
     restart: unless-stopped
 ```
+
+## Build:
+```bash
+docker build -t leonardogetulio/reflex:latest .
+```
+
+## Push:
+```bash
+docker push leonardogetulio/reflex:latest
+```
+
