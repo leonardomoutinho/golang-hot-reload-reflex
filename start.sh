@@ -12,6 +12,9 @@
 # command="$1"
 # shift
 
+# remove old go build cache
+rm -rf /tmp/go-build*
+
 # Execute the command with the remaining arguments
 # exec reflex "$@"
 exec reflex -r '(\/app.*.go$|\/app.*.go\.mod|\/app.*.env)' --decoration=none -s go run "$@"
